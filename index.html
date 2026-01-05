@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pusat Data & Repositori Debian/Linux - Kumpulan repositori, command, dan tools">
+    <link rel="icon" type="image/x-icon" href="https://denitkj.github.io/deni/icon.png">
+    <title>Debian Center - Repositori & Command Linux</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+:root{--primary:#6366f1;--secondary:#8b5cf6;--accent:#06b6d4;--success:#10b981;--warning:#f59e0b;--danger:#ef4444;--dark:#0f172a;--light:#f8fafc;--text-primary:#1f2937;--text-secondary:#6b7280;--bg-primary:#fff;--bg-secondary:#f8fafc;--border:#e5e7eb;--shadow-sm:0 1px 3px rgba(0,0,0,.1);--shadow-md:0 4px 6px rgba(0,0,0,.1);--shadow-lg:0 10px 25px rgba(0,0,0,.15);--shadow-xl:0 20px 40px rgba(0,0,0,.2)}[data-theme=dark]{--text-primary:#f9fafb;--text-secondary:#d1d5db;--bg-primary:#0f172a;--bg-secondary:#1e293b;--border:#334155}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6;transition:all .3s ease;overflow-x:hidden}.bg-animation{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;background:linear-gradient(135deg,var(--bg-primary) 0%,var(--bg-secondary) 100%)}.bg-animation::after,.bg-animation::before{content:'';position:absolute;border-radius:50%;filter:blur(80px);opacity:.3;animation:float 20s infinite ease-in-out}.bg-animation::before{width:400px;height:400px;background:var(--primary);top:20%;left:10%;animation-delay:0s}.bg-animation::after{width:350px;height:350px;background:var(--secondary);bottom:20%;right:10%;animation-delay:5s}@keyframes float{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-50px) scale(1.1)}66%{transform:translate(-20px,40px) scale(.9)}}.scroll-progress{position:fixed;top:0;left:0;width:0;height:4px;background:linear-gradient(90deg,var(--primary),var(--accent));z-index:10000;transition:width .1s ease;box-shadow:0 0 15px var(--primary)}.navbar{position:fixed;top:0;width:100%;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);z-index:9999;padding:1rem 0;border-bottom:1px solid var(--border);box-shadow:var(--shadow-sm);transition:all .3s ease}[data-theme=dark] .navbar{background:rgba(15,23,42,.95)}.navbar.scrolled{padding:.5rem 0;box-shadow:var(--shadow-md)}.nav-container{max-width:1400px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center}.logo{font-size:1.5rem;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-decoration:none;display:flex;align-items:center;gap:.5rem;transition:transform .3s ease}.logo:hover{transform:scale(1.05)}.nav-menu{display:flex;list-style:none;gap:2rem;align-items:center}.nav-item a{text-decoration:none;color:var(--text-primary);font-weight:500;position:relative;padding:.5rem 0;transition:color .3s ease}.nav-item a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--primary),var(--secondary));transition:width .3s ease}.nav-item a.active::after,.nav-item a:hover::after{width:100%}.lang-toggle,.theme-toggle{background:var(--bg-secondary);border:none;border-radius:50%;width:45px;height:45px;display:flex;align-items:center;justify-content:center;cursor:pointer;color:var(--text-primary);transition:all .3s ease;box-shadow:var(--shadow-sm)}.lang-toggle:hover,.theme-toggle:hover{transform:scale(1.1) rotate(15deg);box-shadow:var(--shadow-md)}.lang-toggle{border-radius:25px;width:auto;padding:.6rem 1.2rem;font-weight:700;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff}.mobile-menu-btn{display:none;background:var(--bg-secondary);border:none;border-radius:12px;width:45px;height:45px;align-items:center;justify-content:center;cursor:pointer;color:var(--text-primary);box-shadow:var(--shadow-sm)}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:8rem 2rem 4rem;position:relative;overflow:hidden}.hero-container{max-width:1200px;margin:0 auto;text-align:center;position:relative;z-index:2}.hero-content h1{font-size:clamp(2rem,6vw,4rem);font-weight:900;margin-bottom:1.5rem;background:linear-gradient(135deg,var(--primary),var(--secondary),var(--accent));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1.2;animation:slideInDown .8s ease}@keyframes slideInDown{from{opacity:0;transform:translateY(-50px)}to{opacity:1;transform:translateY(0)}}.hero-content p{font-size:1.2rem;color:var(--text-secondary);margin-bottom:3rem;max-width:700px;margin-left:auto;margin-right:auto;animation:slideInUp .8s ease .2s both}@keyframes slideInUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}.search-container{margin:3rem auto;max-width:700px;position:relative;animation:zoomIn .8s ease .4s both;z-index:99999}@keyframes zoomIn{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}.search-box{position:relative;display:flex;gap:.5rem}.search-box input{flex:1;padding:1.2rem 3.5rem;border:2px solid var(--border);border-radius:50px;font-size:1rem;background:var(--bg-primary);color:var(--text-primary);transition:all .3s ease;box-shadow:var(--shadow-md)}.search-box input:focus{outline:0;border-color:var(--primary);box-shadow:0 0 0 4px rgba(99,102,241,.1);transform:translateY(-2px)}.search-icon{position:absolute;left:1.5rem;top:50%;transform:translateY(-50%);font-size:1.2rem;color:var(--primary)}.search-btn{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;border:none;padding:1rem 2.5rem;border-radius:50px;cursor:pointer;font-weight:700;transition:all .3s ease;box-shadow:var(--shadow-md);white-space:nowrap}.search-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}.search-results{position:absolute;top:calc(100% + 1rem);left:0;right:0;background:var(--bg-primary);border:1px solid var(--border);border-radius:20px;max-height:400px;overflow-y:auto;box-shadow:var(--shadow-xl);display:none;z-index:100}.search-results.show{display:block;animation:slideDown .3s ease}@keyframes slideDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}.search-result-item{padding:1rem 1.5rem;border-bottom:1px solid var(--border);cursor:pointer;transition:all .2s ease}.search-result-item:hover{background:var(--bg-secondary);padding-left:2rem}.search-result-title{font-weight:600;color:var(--primary);margin-bottom:.25rem}.search-result-desc{font-size:.9rem;color:var(--text-secondary)}.search-result-category{display:inline-block;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:.2rem .8rem;border-radius:12px;font-size:.75rem;font-weight:600;margin-top:.5rem}.quick-access{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:4rem;animation:fadeIn .8s ease .6s both}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.card{background:var(--bg-primary);padding:2.5rem;border-radius:25px;box-shadow:var(--shadow-md);transition:all .4s cubic-bezier(.175,.885,.32,1.275);cursor:pointer;border:2px solid transparent;position:relative;overflow:hidden}.card::before{content:'';position:absolute;top:0;left:0;width:100%;height:5px;background:linear-gradient(90deg,var(--primary),var(--secondary))}.card:hover{transform:translateY(-10px) scale(1.02);box-shadow:var(--shadow-xl);border-color:var(--primary)}.card-icon{font-size:3rem;margin-bottom:1.5rem;display:inline-block;animation:bounce 2s infinite}@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}.card:hover .card-icon{animation:none;transform:scale(1.2) rotate(5deg)}.card h3{color:var(--primary);margin-bottom:.75rem;font-size:1.4rem;font-weight:700}.card p{color:var(--text-secondary);font-size:1rem}.section{display:none;padding:8rem 2rem 4rem;animation:fadeInSection .5s ease}.section.active{display:block}@keyframes fadeInSection{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}.container{max-width:1200px;margin:0 auto}.section-title{text-align:center;font-size:clamp(2rem,5vw,3rem);font-weight:800;margin-bottom:1rem;background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;-webkit-text-fill-color:transparent}.section-subtitle{text-align:center;font-size:1.2rem;color:var(--text-secondary);margin-bottom:4rem;max-width:700px;margin-left:auto;margin-right:auto}.repo-block{background:var(--bg-primary);border-radius:25px;padding:2.5rem;margin-bottom:2rem;box-shadow:var(--shadow-md);transition:all .3s ease;border:2px solid transparent}.repo-block:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--primary)}.repo-block h3{color:var(--primary);margin-bottom:1rem;font-size:1.5rem;font-weight:700}.code-block{background:var(--bg-secondary);border-radius:15px;padding:1.5rem;position:relative;font-family:'Courier New',monospace;overflow-x:auto;margin:1rem 0;border:2px solid var(--border);cursor:pointer;transition:all .3s ease}.code-block:hover{border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,.1)}.code-block::before{content:'Klik untuk copy';position:absolute;top:.5rem;right:.5rem;background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:.4rem .8rem;border-radius:8px;font-size:.75rem;font-weight:600;opacity:0;transition:opacity .3s ease;pointer-events:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}.code-block:hover::before{opacity:1}.code-block.copied::before{content:'✓ Copied!';background:linear-gradient(135deg,var(--success),#059669);opacity:1}.code-block pre{margin:0;color:var(--text-primary);font-size:.9rem;line-height:1.6}.command-category{margin-bottom:3rem}.command-category h3{color:var(--primary);margin-bottom:1.5rem;font-size:1.5rem;font-weight:700;display:flex;align-items:center;gap:.75rem}.command-item{background:var(--bg-primary);border-radius:15px;padding:1.5rem;margin-bottom:1rem;transition:all .3s ease;box-shadow:var(--shadow-sm);border:2px solid transparent}.command-item:hover{transform:translateX(10px);box-shadow:var(--shadow-md);border-color:var(--primary)}.command-desc{color:var(--text-secondary);font-size:.95rem;margin-bottom:.75rem;font-weight:500}.custom-blocker{display:flex;flex-direction:column;gap:1.5rem;padding:2rem;border-radius:20px;background:var(--bg-primary);border:2px solid var(--border);box-shadow:var(--shadow-md);transition:all .3s ease}.custom-blocker:hover{border-color:var(--accent);box-shadow:var(--shadow-lg)}.custom-blocker label{font-size:.95rem;font-weight:600;color:var(--text-primary)}.custom-blocker input,.custom-blocker select{padding:1rem;border-radius:12px;border:2px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);font-size:.95rem;transition:all .3s ease}.custom-blocker input:focus,.custom-blocker select:focus{outline:0;border-color:var(--accent);box-shadow:0 0 0 4px rgba(6,182,212,.1)}.generate-btn{padding:1rem;border-radius:12px;border:none;cursor:pointer;font-weight:700;font-size:1rem;color:#fff;background:linear-gradient(135deg,var(--accent),#0891b2);transition:all .3s ease;box-shadow:var(--shadow-sm)}.generate-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}.interface-selector{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:.75rem;margin-top:.5rem}.interface-checkbox{display:none}.interface-label{display:flex;align-items:center;justify-content:center;padding:.75rem;background:var(--bg-secondary);border:2px solid var(--border);border-radius:10px;cursor:pointer;transition:all .3s ease;font-weight:600;font-size:.9rem}.interface-checkbox:checked+.interface-label{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;border-color:var(--primary);transform:scale(1.05)}.interface-label:hover{border-color:var(--primary);transform:translateY(-2px)}table{width:100%;border-collapse:collapse;background:var(--bg-primary);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-md);margin:2rem 0}td,th{padding:1.5rem;text-align:left;border-bottom:1px solid var(--border)}th{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;font-weight:600;text-transform:uppercase;font-size:.85rem}tr:hover{background:var(--bg-secondary)}.download-item{background:var(--bg-primary);border-radius:20px;padding:2rem;margin-bottom:1.5rem;display:flex;justify-content:space-between;align-items:center;transition:all .3s ease;box-shadow:var(--shadow-sm);border:2px solid transparent}.download-item:hover{transform:translateY(-5px);box-shadow:var(--shadow-lg);border-color:var(--primary)}.download-item h3{color:var(--primary);margin-bottom:.5rem;font-size:1.2rem;font-weight:700}.download-btn{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:.75rem 1.5rem;border:none;border-radius:50px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:.5rem;transition:all .3s ease;font-weight:600;box-shadow:var(--shadow-sm)}.download-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}.version-info{background:var(--bg-primary);border-left:5px solid var(--primary);padding:2rem;margin:1.5rem 0;border-radius:15px;box-shadow:var(--shadow-sm);transition:all .3s ease}.version-info:hover{transform:translateX(10px);box-shadow:var(--shadow-md)}.version-info h3{color:var(--primary);margin-bottom:1rem;font-size:1.4rem;font-weight:700}.feedback-form{background:var(--bg-primary);padding:3rem;border-radius:25px;box-shadow:var(--shadow-md);border:2px solid var(--border)}.form-group{margin-bottom:2rem}.form-group label{display:block;margin-bottom:.75rem;font-weight:600;color:var(--text-primary)}.form-group input,.form-group select,.form-group textarea{width:100%;padding:1rem 1.25rem;border:2px solid var(--border);border-radius:12px;background:var(--bg-secondary);color:var(--text-primary);font-size:1rem;transition:all .3s ease;font-family:inherit}.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:0;border-color:var(--primary);box-shadow:0 0 0 3px rgba(99,102,241,.1)}.form-group textarea{resize:vertical;min-height:140px}.submit-btn{background:linear-gradient(135deg,var(--primary),var(--secondary));color:#fff;padding:1rem 2.5rem;border:none;border-radius:50px;cursor:pointer;font-size:1rem;font-weight:700;transition:all .3s ease;box-shadow:var(--shadow-md);display:inline-flex;align-items:center;gap:.5rem}.submit-btn:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}.toast-notification{position:fixed;top:100px;right:20px;max-width:400px;padding:1.25rem 1.75rem;border-radius:15px;box-shadow:var(--shadow-xl);z-index:10000;display:flex;align-items:center;gap:1rem;font-weight:600;animation:slideInRight .4s ease}.toast-notification.success{background:linear-gradient(135deg,var(--success),#059669);color:#fff}.toast-notification.error{background:linear-gradient(135deg,var(--danger),#dc2626);color:#fff}@keyframes slideInRight{from{opacity:0;transform:translateX(100px)}to{opacity:1;transform:translateX(0)}}@keyframes slideOutRight{from{opacity:1;transform:translateX(0)}to{opacity:0;transform:translateX(100px)}}.footer{background:var(--bg-secondary);padding:3rem 2rem;text-align:center;color:var(--text-secondary);border-top:1px solid var(--border);margin-top:4rem}@media (max-width:968px){.nav-menu{position:fixed;top:85px;left:1rem;right:1rem;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);flex-direction:column;padding:2rem;box-shadow:var(--shadow-xl);display:none;border-radius:20px;gap:1rem}[data-theme=dark] .nav-menu{background:rgba(15,23,42,.98)}.nav-menu.active{display:flex}.mobile-menu-btn{display:flex}.hero{padding:6rem 1.5rem 3rem}.search-box{flex-direction:column}.search-box input{padding:1rem 3rem}.search-btn{width:100%;justify-content:center}.quick-access{grid-template-columns:1fr;gap:1.5rem}.section{padding:5rem 1.5rem 3rem}.download-item{flex-direction:column;gap:1rem;text-align:center}.download-btn{width:100%;justify-content:center}.feedback-form{padding:2rem 1.5rem}.code-block{font-size:.85rem}table{font-size:.85rem}td,th{padding:1rem}}@media (max-width:480px){.hero-content h1{font-size:2rem}.section-title{font-size:1.8rem}.card{padding:2rem}.nav-container{padding:0 1rem}.interface-selector{grid-template-columns:repeat(2,1fr);gap:.5rem}.interface-label{padding:.6rem;font-size:.85rem}.code-block{font-size:.85rem;padding:1rem}.code-block::before{font-size:.7rem;padding:.3rem .6rem}}
+
+
+@media (min-width: 992px) {
+    .form-inline-pc {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        width: 100%;
+        align-items: flex-end;
+    }
+}
+
+/* default (HP & tablet) tetap normal */
+.form-col {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 1024px) {
+
+    /* ===== LIGHT MODE (DEFAULT) ===== */
+    .download-item {
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        padding: 26px 30px;
+        border-radius: 18px;
+
+        background: var(--bg-primary);
+        color: var(--text-primary);
+
+        box-shadow: var(--shadow-md);
+        border: 2px solid var(--border);
+    }
+
+    .download-item h3 {
+        color: var(--primary);
+    }
+
+    .download-item p,
+    .download-item li {
+        color: var(--text-secondary);
+    }
+
+    /* ===== DARK MODE ===== */
+    [data-theme="dark"] .download-item {
+        background: linear-gradient(135deg, #0f172a, #020617);
+        box-shadow: 0 18px 35px rgba(0,0,0,0.35);
+        border-color: #1e293b;
+    }
+
+    [data-theme="dark"] .download-item h3 {
+        color: #ffffff;
+    }
+
+    [data-theme="dark"] .download-item p,
+    [data-theme="dark"] .download-item li {
+        color: #cbd5f5;
+    }
+}
+/* ===============================
+   FIX LIGHT MODE DOWNLOAD CARD
+   =============================== */
+
+:root:not([data-theme="dark"]) .download-item {
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    border: 2px solid var(--border);
+    box-shadow: var(--shadow-sm);
+}
+/* ==================================
+   FIX TEKS HILANG SAAT LOAD AWAL
+   (LIGHT MODE)
+   ================================== */
+
+:root:not([data-theme="dark"]) 
+.download-item,
+:root:not([data-theme="dark"]) 
+.download-item * {
+    color: var(--text-primary) !important;
+}
+
+:root:not([data-theme="dark"]) 
+.download-item p,
+:root:not([data-theme="dark"]) 
+.download-item li {
+    color: var(--text-secondary) !important;
+}
+
+
+    /* Wrapper teks download */
+    .download-title-wrapper {
+        max-width: 900px;     /* samakan dengan card */
+        margin: 0 auto 2rem;
+        text-align: center;
+    }
+
+    .download-title-wrapper h3 {
+        font-size: 1.6rem;
+        color: var(--primary);
+        margin-bottom: 0.6rem;
+    }
+
+    .download-title-wrapper p {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+    }
+
+
+.download-group-title {
+    margin: 3rem 0 1.5rem;
+    font-size: 1.4rem;
+    color: var(--primary);
+    border-left: 4px solid var(--primary);
+    padding-left: 12px;
+}
+
+.download-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.download-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 1.5rem;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 16px;
+    font-weight: 600;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    transition: all .3s ease;
+}
+
+.download-item span {
+    font-size: .9rem;
+    opacity: .85;
+    font-weight: 400;
+}
+
+.download-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.25);
+    background: linear-gradient(135deg, #2a5298, #1e3c72);
+}
+
+.download-item.done {
+    background: linear-gradient(135deg, #11998e, #38ef7d);
+}
+
+.download-item.done:hover {
+    background: linear-gradient(135deg, #38ef7d, #11998e);
+}
+* Loading Spinner */
+.btn-loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.btn-loading span {
+    opacity: 0;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    left: 50%;
+    margin-left: -9px;
+    margin-top: -9px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Responsive Toast */
+@media (max-width: 768px) {
+    .toast-notification {
+        top: 80px;
+        right: 10px;
+        left: 10px;
+        max-width: none;
+        font-size: 0.9rem;
+        padding: 0.875rem 1.25rem;
+    }
+}
+
+/* ===== INTRO SPLASH ===== */
+.intro-overlay {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(
+        135deg,
+        var(--bg-primary),
+        var(--bg-secondary)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 20000;
+    overflow: hidden;
+}
+[data-theme="dark"] .intro-overlay {
+    background: linear-gradient(
+        135deg,
+        #0f172a 0%,
+        #1e293b 50%,
+        #020617 100%
+    );
+}
+
+/* Animated background particles */
+.intro-overlay::before {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+    animation: rotateBackground 20s linear infinite;
+}
+
+@keyframes rotateBackground {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Konten tengah */
+.intro-box {
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    animation: fadeInScale 0.8s ease-out;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Icon dengan glow effect */
+.intro-icon {
+    font-size: 4.5rem;
+    color: #6366f1;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 0 30px rgba(99, 102, 241, 0.6));
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 30px rgba(99, 102, 241, 0.6));
+    }
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 50px rgba(99, 102, 241, 0.9));
+    }
+}
+
+/* Title dengan gradient animasi */
+.intro-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6, #06b6d4, #6366f1);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s ease infinite;
+    letter-spacing: 2px;
+    text-shadow: 0 0 40px rgba(99, 102, 241, 0.3);
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Subtitle dengan fade in delay */
+.intro-subtitle {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.3s forwards;
+    color: #cbd5e1;
+    letter-spacing: 1px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+/* Loading bar */
+.intro-loading {
+    margin-top: 2.5rem;
+    width: 200px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.intro-loading-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #6366f1, #8b5cf6, #06b6d4);
+    background-size: 200% 100%;
+    border-radius: 10px;
+    animation: loadingBar 2s ease-in-out;
+}
+
+@keyframes loadingBar {
+    0% { 
+        width: 0%;
+        background-position: 0% 50%;
+    }
+    100% { 
+        width: 100%;
+        background-position: 100% 50%;
+    }
+}
+
+/* EXIT: SLIDE UP */
+.intro-overlay.slide-up {
+    animation: slideUpFade 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-100%);
+    }
+}
+
+/* ===== HP: KECILKAN FONT + ICON ===== */
+@media (max-width: 768px) {
+
+    /* kecilkan font global */
+    html {
+        font-size: calc(16px - 3px); /* 13px */
+    }
+}
+/* =================================
+   FIX SEARCH ICON - MOBILE VIEW
+   ================================= */
+
+@media (max-width: 768px) {
+
+    .search-box {
+        position: relative;
+    }
+
+    .search-icon {
+        left: 1.2rem;
+        top: 1.15rem;
+        transform: none;
+        font-size: 1.1rem;
+        z-index: 2;
+    }
+
+    .search-box input {
+        padding-left: 3.2rem; /* beri ruang icon */
+        height: 50px;
+        font-size: 0.95rem;
+    }
+
+    .search-btn {
+        height: 48px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ===============================
+   FAKE AOS – HERO PREMIUM ANIMATION
+   =============================== */
+
+/* state awal (seperti AOS before) */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    filter: blur(8px);
+    transition:
+        opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.9s cubic-bezier(0.4, 0, 0.2, 1),
+        filter 0.9s ease;
+    will-change: transform, opacity;
+}
+
+/* saat aktif (seperti AOS active) */
+[data-animate].animate-show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+}
+
+/* ===============================
+   STAGGER DELAY (AUTO)
+   =============================== */
+[data-animate][data-delay="1"] { transition-delay: 0.15s; }
+[data-animate][data-delay="2"] { transition-delay: 0.3s; }
+[data-animate][data-delay="3"] { transition-delay: 0.45s; }
+[data-animate][data-delay="4"] { transition-delay: 0.6s; }
+[data-animate][data-delay="5"] { transition-delay: 0.75s; }
+
+
+    </style>
+</head>
+<body>
+  <!-- INTRO SPLASH -->
+<div id="introOverlay" class="intro-overlay">
+    <div class="intro-box">
+        <i class="fa-solid fa-database intro-icon"></i>
+
+        <h1 class="intro-title"
+            data-id="Debian Data Center"
+            data-en="Debian Data Center">
+            Debian Data Center
+        </h1>
+
+        <p class="intro-subtitle"
+           data-id="Pusat Data & Repositori Debian Linux"
+           data-en="Debian Linux Data & Repository Center">
+            Pusat Data & Repositori Debian Linux
+        </p>
+    </div>
+</div>
+
+
+
+    <div class="bg-animation"></div>
+    <div class="scroll-progress"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-database"></i>
+                Data Center
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" data-id="Beranda" data-en="Home">Beranda</a></li>
+                <li class="nav-item"><a href="#repo" data-id="Repositori" data-en="Repository">Repositori</a></li>
+                <li class="nav-item"><a href="#commands" data-id="Perintah" data-en="Commands">Perintah</a></li>
+                <li class="nav-item"><a href="#links" data-id="Link" data-en="Links">Link</a></li>
+                <li class="nav-item"><a href="#download" data-id="Download" data-en="Download">Download</a></li>
+                <li class="nav-item"><a href="#docs" data-id="Contoh LSP" data-en="Sample LSP">Contoh LSP</a></li>
+                <li class="nav-item"><a href="#contact" data-id="Kontak" data-en="Contact">Kontak</a></li>
+                <li class="nav-item">
+                    <button class="theme-toggle" onclick="toggleTheme()">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="lang-toggle" onclick="toggleLanguage()">EN</button>
+                </li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+<section id="home" class="section active">
+    <div class="hero">
+        <div class="hero-container">
+
+            <!-- HERO TEXT -->
+            <div class="hero-content">
+                <h1
+                    data-animate
+                    data-delay="1"
+                    data-id="Pusat Data & Repositori Debian Linux"
+                    data-en="Debian Linux Data & Repository Center">
+                    Pusat Data & Repositori Debian Linux
+                </h1>
+
+                <p
+                    data-animate
+                    data-delay="2"
+                    data-id="Tempat lengkap untuk mencari repositori Debian, perintah terminal penting, link referensi, dan file konfigurasi. Semua yang Anda butuhkan untuk administrasi Linux dalam satu tempat."
+                    data-en="A complete place to find Debian repositories, important terminal commands, reference links, and configuration files. Everything you need for Linux administration in one place.">
+                    Tempat lengkap untuk mencari repositori Debian, perintah terminal penting,
+                    link referensi, dan file konfigurasi. Semua yang Anda butuhkan untuk
+                    administrasi Linux dalam satu tempat.
+                </p>
+            </div>
+
+            <!-- SEARCH -->
+            <div class="search-container"
+                 data-animate
+                 data-delay="3">
+                <div class="search-box">
+                    <i class="fas fa-search search-icon"></i>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Cari repositori, perintah, atau link..."
+                        onkeyup="handleSearch(event)">
+                    <button class="search-btn" onclick="performSearch()">
+                        <i class="fas fa-search"></i>
+                        <span data-id="Cari" data-en="Search">Cari</span>
+                    </button>
+                </div>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+
+            <!-- QUICK ACCESS CARD -->
+<div class="quick-access"
+     data-animate
+     data-delay="4">
+
+    <!-- Portofolio -->
+    <div class="card" onclick="window.open('https://denitkj.github.io/deni', '_blank')">
+        <div class="card-icon">
+            <i class="fa-solid fa-user-astronaut"></i>
+        </div>
+        <h3 data-id="Portofolio" data-en="Portfolio">
+            Portofolio
+        </h3>
+        <p data-id="Profil dan proyek pribadi"
+           data-en="Personal profile and projects">
+            Profil dan proyek pribadi
+        </p>
+    </div>
+
+    <!-- Repositori -->
+    <div class="card" onclick="showSection('repo')">
+        <div class="card-icon">
+            <i class="fa-solid fa-box-archive"></i>
+        </div>
+        <h3 data-id="Repositori Debian" data-en="Debian Repository">
+            Repositori Debian
+        </h3>
+        <p data-id="Semua repo resmi, mirror, dan konfigurasi"
+           data-en="All official repos, mirrors, and configurations">
+            Semua repo resmi, mirror, dan konfigurasi
+        </p>
+    </div>
+
+    <!-- Command -->
+    <div class="card" onclick="showSection('commands')">
+        <div class="card-icon">
+            <i class="fa-solid fa-terminal"></i>
+        </div>
+        <h3 data-id="Command Library" data-en="Command Library">
+            Command Library
+        </h3>
+        <p data-id="Kumpulan perintah terminal lengkap"
+           data-en="Complete terminal command collection">
+            Kumpulan perintah terminal lengkap
+        </p>
+    </div>
+
+    <!-- Links -->
+    <div class="card" onclick="showSection('links')">
+        <div class="card-icon">
+            <i class="fa-solid fa-link"></i>
+        </div>
+        <h3 data-id="Sumber Daya Penting" data-en="Important Resources">
+            Sumber Daya Penting
+        </h3>
+        <p data-id="Link website dan dokumentasi resmi"
+           data-en="Official website and documentation links">
+            Link website dan dokumentasi resmi
+        </p>
+    </div>
+
+    <!-- Download -->
+    <div class="card" onclick="showSection('download')">
+        <div class="card-icon">
+            <i class="fa-solid fa-cloud-arrow-down"></i>
+        </div>
+        <h3 data-id="Download" data-en="Download">
+            Download
+        </h3>
+        <p data-id="File konfigurasi, script, dan tools"
+           data-en="Configuration files, scripts, and tools">
+            File konfigurasi, script, dan tools
+        </p>
+    </div>
+
+    <!-- Top Up Game -->
+    <div class="card" onclick="window.open('https://topupgame-kamu.com', '_blank')">
+        <div class="card-icon">
+            <i class="fa-solid fa-gamepad"></i>
+        </div>
+        <h3 data-id="Top Up Game" data-en="Game Top Up">
+            Top Up Game
+        </h3>
+        <p data-id="Layanan top up game online"
+           data-en="Online game top-up services">
+            Layanan top up game online
+        </p>
+    </div>
+
+</div>
+
+
+        </div>
+    </div>
+</section>
+
+
+ <section id="repo" class="section">
+    <div class="container">
+        <h2 class="section-title"
+            data-id="📦 Repositori Debian Lengkap"
+            data-en="📦 Complete Debian Repositories">
+            📦 Repositori Debian Lengkap
+        </h2>
+
+        <p class="section-subtitle"
+           data-id="Kumpulan repositori resmi Debian + rekomendasi admin + mirror tercepat."
+           data-en="A collection of official Debian repositories, admin recommendations, and the fastest mirrors.">
+            Kumpulan repositori resmi Debian + rekomendasi admin + mirror tercepat.
+        </p>
+
+        <div class="repo-block" style="border-left: 5px solid var(--accent);">
+            <h3
+                data-id="⭐ Rekomendasi Admin (Paling Stabil & Paling Banyak Dipakai)"
+                data-en="⭐ Admin Recommendation (Most Stable & Widely Used)">
+                ⭐ Rekomendasi Admin (Paling Stabil & Paling Banyak Dipakai)
+            </h3>
+
+            <p
+                data-id="Repo paling stabil, cepat, minim error – cocok untuk server, lab, dan mikrotik VM."
+                data-en="The most stable and fast repository with minimal errors – suitable for servers, labs, and Mikrotik VMs.">
+                Repo paling stabil, cepat, minim error – cocok untuk server, lab, dan mikrotik VM.
+            </p>
+
+            <div class="code-block" onclick="copyCodeBlock(this)">
+<pre>deb http://deb.debian.org/debian bullseye main contrib non-free
+deb-src http://deb.debian.org/debian bullseye main contrib non-free
+
+deb http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
+deb-src http://deb.debian.org/debian-security/ bullseye-security main contrib non-free
+
+deb http://deb.debian.org/debian bullseye-updates main contrib non-free
+deb-src http://deb.debian.org/debian bullseye-updates main contrib non-free</pre>
+            </div>
+        </div>
+
+        <div class="repo-block">
+            <h3
+                data-id="📌 Debian 11 (Bullseye) – Kambing UI"
+                data-en="📌 Debian 11 (Bullseye) – Kambing UI Mirror">
+                📌 Debian 11 (Bullseye) – Kambing UI
+            </h3>
+
+            <p
+                data-id="Mirror lokal Indonesia (Jakarta) – stabil & cepat untuk lab/sekolah/server."
+                data-en="Local Indonesian mirror (Jakarta) – stable and fast for labs, schools, and servers.">
+                Mirror lokal Indonesia (Jakarta) – stabil & cepat untuk lab/sekolah/server.
+            </p>
+
+            <div class="code-block" onclick="copyCodeBlock(this)">
+<pre>deb http://kambing.ui.ac.id/debian bullseye main contrib non-free
+deb http://kambing.ui.ac.id/debian-security bullseye-security main contrib non-free
+deb http://kambing.ui.ac.id/debian bullseye-updates main contrib non-free</pre>
+            </div>
+        </div>
+
+        <div class="repo-block">
+            <h3
+                data-id="📌 Debian 11 (Bullseye) – Datautama (Kartolo)"
+                data-en="📌 Debian 11 (Bullseye) – Datautama (Kartolo) Mirror">
+                📌 Debian 11 (Bullseye) – Datautama (Kartolo)
+            </h3>
+
+            <p
+                data-id="Mirror lokal Indonesia (Surabaya) – sering dipakai di SMK & kampus."
+                data-en="Local Indonesian mirror (Surabaya) – commonly used in vocational schools and universities.">
+                Mirror lokal Indonesia (Surabaya) – sering dipakai di SMK & kampus.
+            </p>
+
+            <div class="code-block" onclick="copyCodeBlock(this)">
+<pre>deb http://kartolo.sby.datautama.net.id/debian bullseye main contrib non-free
+deb http://kartolo.sby.datautama.net.id/debian-security bullseye-security main contrib non-free
+deb http://kartolo.sby.datautama.net.id/debian bullseye-updates main contrib non-free</pre>
+            </div>
+        </div>
+
+        <div class="repo-block">
+            <h3
+                data-id="📌 Debian 11 (Bullseye) – Repo Resmi"
+                data-en="📌 Debian 11 (Bullseye) – Official Repository">
+                📌 Debian 11 (Bullseye) – Repo Resmi
+            </h3>
+
+            <p
+                data-id="Gunakan jika mirror lokal bermasalah."
+                data-en="Use this if local mirrors are experiencing issues.">
+                Gunakan jika mirror lokal bermasalah.
+            </p>
+
+            <div class="code-block" onclick="copyCodeBlock(this)">
+<pre>deb http://deb.debian.org/debian bullseye main contrib non-free
+deb http://security.debian.org/debian-security bullseye-security main contrib non-free
+deb http://deb.debian.org/debian bullseye-updates main contrib non-free</pre>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    <section id="commands" class="section">
+        <div class="container">
+            <h2 class="section-title">🧰 Command Library</h2>
+            <p class="section-subtitle">Kumpulan perintah terminal yang sering digunakan dalam administrasi Linux</p>
+
+            <div class="command-category">
+                <h3><i class="fas fa-globe"></i> Blokir HTTP via Web Proxy (Custom)</h3>
+                <div class="custom-blocker">
+<div class="form-inline-pc">
+    <div class="form-col">
+        <label>Nama Rule:</label>
+        <input type="text" id="proxyRuleName" placeholder="Misal: Blokir Sosmed">
+    </div>
+
+    <div class="form-col">
+        <label>Website yang ingin diblokir:</label>
+        <input type="text" id="proxyBlockedSite" placeholder="contoh: facebook.com">
+    </div>
+</div>
+
+                    <div class="interface-selector">
+                        <input type="checkbox" id="proxy-eth1" class="interface-checkbox" value="ether1">
+                        <label for="proxy-eth1" class="interface-label">ether1</label>
+                        <input type="checkbox" id="proxy-eth2" class="interface-checkbox" value="ether2">
+                        <label for="proxy-eth2" class="interface-label">ether2</label>
+                        <input type="checkbox" id="proxy-eth3" class="interface-checkbox" value="ether3">
+                        <label for="proxy-eth3" class="interface-label">ether3</label>
+                        <input type="checkbox" id="proxy-eth4" class="interface-checkbox" value="ether4">
+                        <label for="proxy-eth4" class="interface-label">ether4</label>
+                        <input type="checkbox" id="proxy-eth5" class="interface-checkbox" value="ether5">
+                        <label for="proxy-eth5" class="interface-label">ether5</label>
+                        <input type="checkbox" id="proxy-wlan1" class="interface-checkbox" value="wlan1">
+                        <label for="proxy-wlan1" class="interface-label">wlan1</label>
+                        <input type="checkbox" id="proxy-wlan2" class="interface-checkbox" value="wlan2">
+                        <label for="proxy-wlan2" class="interface-label">wlan2</label>
+                    </div>
+
+                    <button class="generate-btn" onclick="generateProxyBlock()">
+                        <i class="fas fa-cog"></i> Generate Perintah
+                    </button>
+                    <div id="proxyResult" class="code-block" style="display:none;" onclick="copyCodeBlock(this)">
+                        <pre id="proxyCommand"></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="command-category">
+                <h3><i class="fas fa-shield-alt"></i> Blokir HTTPS (Layer7) – Custom</h3>
+                <div class="custom-blocker">
+<div class="form-inline-pc">
+    <div class="form-col">
+        <label>Nama Rule:</label>
+        <input type="text" id="l7RuleName" placeholder="Misal: Blokir HTTPS IG">
+    </div>
+
+    <div class="form-col">
+        <label>Website HTTPS yang ingin diblokir:</label>
+        <input type="text" id="l7BlockedSite" placeholder="contoh: instagram.com">
+    </div>
+</div>
+
+                    <label>Pilih Interface:</label>
+                    <div class="interface-selector">
+                        <input type="checkbox" id="l7-eth1" class="interface-checkbox" value="ether1">
+                        <label for="l7-eth1" class="interface-label">ether1</label>
+                        <input type="checkbox" id="l7-eth2" class="interface-checkbox" value="ether2">
+                        <label for="l7-eth2" class="interface-label">ether2</label>
+                        <input type="checkbox" id="l7-eth3" class="interface-checkbox" value="ether3">
+                        <label for="l7-eth3" class="interface-label">ether3</label>
+                        <input type="checkbox" id="l7-eth4" class="interface-checkbox" value="ether4">
+                        <label for="l7-eth4" class="interface-label">ether4</label>
+                        <input type="checkbox" id="l7-eth5" class="interface-checkbox" value="ether5">
+                        <label for="l7-eth5" class="interface-label">ether5</label>
+                        <input type="checkbox" id="l7-wlan1" class="interface-checkbox" value="wlan1">
+                        <label for="l7-wlan1" class="interface-label">wlan1</label>
+                        <input type="checkbox" id="l7-wlan2" class="interface-checkbox" value="wlan2">
+                        <label for="l7-wlan2" class="interface-label">wlan2</label>
+                    </div>
+                    <button class="generate-btn" onclick="generateL7HTTPS()">
+                        <i class="fas fa-cog"></i> Generate Perintah
+                    </button>
+                    <div id="l7Result" class="code-block" style="display:none;" onclick="copyCodeBlock(this)">
+                        <pre id="l7Command"></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="command-category">
+                <h3><i class="fas fa-box"></i> APT (Package Manager)</h3>
+                <div class="command-item">
+                    <div class="command-desc">Update daftar paket</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>sudo apt update</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Upgrade semua paket</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>sudo apt upgrade</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Install paket baru</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>sudo apt install &lt;nama-paket&gt;</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Hapus paket</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>sudo apt remove &lt;nama-paket&gt;</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Cari paket</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>apt search &lt;nama-paket&gt;</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="command-category">
+                <h3><i class="fas fa-cogs"></i> Systemd (Service Management)</h3>
+                <div class="command-item">
+                    <div class="command-desc">Cek status service</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>systemctl status &lt;service&gt;</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Start service</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>sudo systemctl start &lt;service&gt;</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Enable service saat boot</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>sudo systemctl enable &lt;service&gt;</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Restart service</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>sudo systemctl restart &lt;service&gt;</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="command-category">
+                <h3><i class="fas fa-network-wired"></i> Network</h3>
+                <div class="command-item">
+                    <div class="command-desc">Lihat IP address</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>ip a</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Lihat routing table</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>ip r</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Test koneksi</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>ping google.com</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Lihat koneksi aktif</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>ss -tulpn</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="command-category">
+                <h3><i class="fas fa-folder"></i> File & Folder</h3>
+                <div class="command-item">
+                    <div class="command-desc">List file detail</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>ls -la</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Copy file</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>cp source.txt destination.txt</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Move/rename file</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>mv old.txt new.txt</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Hapus file/folder recursive</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>rm -rf &lt;folder&gt;</pre>
+                    </div>
+                </div>
+                <div class="command-item">
+                    <div class="command-desc">Ubah permission</div>
+                    <div class="code-block" onclick="copyCodeBlock(this)">
+                        <pre>chmod 755 file.sh</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="links" class="section">
+    <div class="container">
+        <h2 class="section-title"
+            data-id="🔗 Link Materi ASJ"
+            data-en="🔗 ASJ Learning Resources">
+            🔗 Link Materi ASJ
+        </h2>
+
+        <p class="section-subtitle"
+           data-id="Kumpulan materi Administrasi Sistem Jaringan (ASJ) Debian Linux disusun dari tingkat kesulitan paling dasar hingga lanjutan"
+           data-en="A collection of Debian Linux Network System Administration (ASJ) materials arranged from basic to advanced levels">
+            Kumpulan materi Administrasi Sistem Jaringan (ASJ) Debian Linux  
+            disusun dari tingkat kesulitan paling dasar hingga lanjutan
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th data-id="Tingkat" data-en="Level">Tingkat</th>
+                    <th data-id="Materi" data-en="Material">Materi</th>
+                    <th data-id="Kelas" data-en="Class">Kelas</th>
+                    <th data-id="Referensi" data-en="Reference">Referensi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- LEVEL 1 -->
+                <tr>
+                    <td><strong data-id="Dasar" data-en="Basic">Dasar</strong></td>
+                    <td>
+                        <strong>FTP Server Debian 11</strong><br>
+                        ProFTPD (FTP & FTPS)
+                    </td>
+                    <td>XI TKJ-1</td>
+                    <td>
+                        <a href="https://guru.smkn1pacitan.sch.id/sis/2023/01/20/ftp-server-debian-11-dengan-proftpd/" target="_blank">
+                            <span data-id="Materi 1" data-en="Resource 1">Materi 1</span>
+                        </a><br>
+                        <a href="https://rafimf.gitlab.io/notes/network/linux/proftpd-ftp-ftps/" target="_blank">
+                            <span data-id="Materi 2" data-en="Resource 2">Materi 2</span>
+                        </a><br>
+                        <a href="https://andhikapratamap.hashnode.dev/instalasi-dan-konfigurasi-ftp-menggunakan-proftpd-pada-debian-11" target="_blank">
+                            <span data-id="Materi 3" data-en="Resource 3">Materi 3</span>
+                        </a>
+                    </td>
+                </tr>
+
+                <!-- LEVEL 2 -->
+                <tr>
+                    <td><strong data-id="Menengah" data-en="Intermediate">Menengah</strong></td>
+                    <td>
+                        <strong>Web Server Apache</strong><br>
+                        <span data-id="Konfigurasi Web Server Debian"
+                              data-en="Debian Web Server Configuration">
+                              Konfigurasi Web Server Debian
+                        </span>
+                    </td>
+                    <td>XI TKJ-1</td>
+                    <td>
+                        <a href="https://rafimf.gitlab.io/notes/network/linux/konfigurasi-apache-webserver-debian/" target="_blank">
+                            <span data-id="Buka Materi" data-en="Open Material">Buka Materi</span>
+                        </a>
+                    </td>
+                </tr>
+
+                <!-- LEVEL 3 -->
+                <tr>
+                    <td><strong data-id="Menengah" data-en="Intermediate">Menengah</strong></td>
+                    <td>
+                        <strong>DNS Server Debian</strong><br>
+                        <span data-id="Konfigurasi DNS Server (BIND9)"
+                              data-en="DNS Server Configuration (BIND9)">
+                              Konfigurasi DNS Server (BIND9)
+                        </span>
+                    </td>
+                    <td>XII TKJ-1</td>
+                    <td>
+                        <a href="https://rafimf.gitlab.io/notes/network/linux/konfigurasi-dnsserver-di-debian/" target="_blank">
+                            <span data-id="Buka Materi" data-en="Open Material">Buka Materi</span>
+                        </a>
+                    </td>
+                </tr>
+
+                <!-- LEVEL 4 -->
+                <tr>
+                    <td><strong data-id="Lanjutan" data-en="Advanced">Lanjutan</strong></td>
+                    <td>
+                        <strong>Mail Server Debian 11</strong><br>
+                        Postfix, Dovecot & Roundcube
+                    </td>
+                    <td>XII TKJ-1</td>
+                    <td>
+                        <a href="https://rafimf.gitlab.io/notes/network/linux/postfix-dovecot-roundcube-mailserver/" target="_blank">
+                            <span data-id="Tutorial" data-en="Tutorial">Tutorial</span>
+                        </a><br>
+                        <a href="https://www.canva.com/design/DAGyiFQ_9y0/i2bEOwY0DUgaL62Rh0h5iw/view" target="_blank">
+                            <span data-id="Slide Canva" data-en="Canva Slides">Slide Canva</span>
+                        </a>
+                    </td>
+                </tr>
+
+                <!-- LEVEL 5 -->
+                <tr>
+                    <td><strong data-id="Lanjutan" data-en="Advanced">Lanjutan</strong></td>
+                    <td>
+                        <strong>Control Panel Hosting</strong><br>
+                        <span data-id="Hosting Server di Debian 11"
+                              data-en="Hosting Server on Debian 11">
+                              Hosting Server di Debian 11
+                        </span>
+                    </td>
+                    <td>XII TKJ-1</td>
+                    <td>
+                        <a href="https://www.canva.com/design/DAGz209TRSA/P6AWVGd9kbO9FDqozpW70g/view" target="_blank">
+                            <span data-id="Slide Canva" data-en="Canva Slides">Slide Canva</span>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ================= DOWNLOAD TUTORIAL ================= -->
+    <div class="download-title-wrapper">
+        <h3
+            data-id="📥 Download Modul Praktikum ASJ (Lengkap)"
+            data-en="📥 Download ASJ Practical Module (Complete)">
+            📥 Download Modul Praktikum ASJ (Lengkap)
+        </h3>
+        <p
+            data-id="Satu file tutorial lengkap Administrasi Sistem Jaringan Debian mulai dari konfigurasi dasar hingga layanan server lanjutan"
+            data-en="One complete tutorial file for Debian Network System Administration from basic configuration to advanced server services">
+            Satu file tutorial lengkap Administrasi Sistem Jaringan Debian  
+            mulai dari konfigurasi dasar hingga layanan server lanjutan
+        </p>
+    </div>
+
+    <div class="download-item">
+        <div>
+            <h3
+                data-id="📘 Modul ASJ Debian Linux (Lengkap)"
+                data-en="📘 Debian Linux ASJ Module (Complete)">
+                📘 Modul ASJ Debian Linux (Lengkap)
+            </h3>
+            <p data-id="Materi dalam satu file:" data-en="Contents in one file:">
+                Materi dalam satu file:
+            </p>
+            <ul>
+                <li data-id="Konfigurasi IP Static Debian" data-en="Debian Static IP Configuration"></li>
+                <li data-id="FTP Server (ProFTPD)" data-en="FTP Server (ProFTPD)"></li>
+                <li data-id="Web Server (Apache)" data-en="Web Server (Apache)"></li>
+                <li data-id="DNS Server (BIND9)" data-en="DNS Server (BIND9)"></li>
+                <li data-id="Mail Server (Postfix, Dovecot & Roundcube)"
+                    data-en="Mail Server (Postfix, Dovecot & Roundcube)"></li>
+            </ul>
+        </div>
+        <a href="#" class="download-btn"
+           onclick="downloadFile('modul-asj-debian-lengkap.txt'); return false;">
+            <i class="fas fa-download"></i>
+            <span data-id="Download Modul" data-en="Download Module">Download Modul</span>
+        </a>
+    </div>
+</section>
+
+
+ <section id="download" class="section">
+ <div class="container">
+    <h2 class="section-title"
+        data-id="Download"
+        data-en="Downloads">
+        Download
+    </h2>
+
+    <p class="section-subtitle"
+       data-id="Aplikasi pendukung dan file konfigurasi untuk praktik Administrasi Sistem Jaringan"
+       data-en="Supporting applications and configuration files for Network System Administration practice">
+        Aplikasi pendukung dan file konfigurasi untuk praktik Administrasi Sistem Jaringan
+    </p>
+
+    <!-- ================= APLIKASI ================= -->
+    <h3 class="download-group-title"
+        data-id="Aplikasi Pendukung"
+        data-en="Supporting Applications / Tools">
+        Aplikasi Pendukung
+    </h3>
+
+    <!-- WinSCP -->
+    <div class="download-item">
+        <div>
+            <h3>WinSCP</h3>
+            <p
+                data-id="Aplikasi transfer file SCP / SFTP / FTP (Windows)"
+                data-en="File transfer application supporting SCP / SFTP / FTP (Windows)">
+                Aplikasi transfer file SCP / SFTP / FTP (Windows)
+            </p>
+
+            <div class="download-labels">
+                <span class="label version">v6.x (Latest)</span>
+                <span class="label size">± 11 MB</span>
+            </div>
+        </div>
+        <a href="https://winscp.net/eng/download.php" target="_blank" class="download-btn">
+            <span data-id="Download" data-en="Download">Download</span>
+        </a>
+    </div>
+
+    <!-- FileZilla -->
+    <div class="download-item">
+        <div>
+            <h3>FileZilla Client</h3>
+            <p
+                data-id="FTP, FTPS, dan SFTP client open-source"
+                data-en="Open-source FTP, FTPS, and SFTP client">
+                FTP, FTPS, dan SFTP client open-source
+            </p>
+
+            <div class="download-labels">
+                <span class="label version">v3.x (Latest)</span>
+                <span class="label size">± 20 MB</span>
+            </div>
+        </div>
+        <a href="https://filezilla-project.org/download.php?type=client" target="_blank" class="download-btn">
+            <span data-id="Download" data-en="Download">Download</span>
+        </a>
+    </div>
+
+    <!-- PuTTY -->
+    <div class="download-item">
+        <div>
+            <h3>PuTTY</h3>
+            <p
+                data-id="SSH dan Telnet client untuk remote server"
+                data-en="SSH and Telnet client for remote server access">
+                SSH dan Telnet client untuk remote server
+            </p>
+
+            <div class="download-labels">
+                <span class="label version">v0.8x</span>
+                <span class="label size">± 3 MB</span>
+            </div>
+        </div>
+        <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" class="download-btn">
+            <span data-id="Download" data-en="Download">Download</span>
+        </a>
+    </div>
+
+    <!-- Winbox -->
+    <div class="download-item">
+        <div>
+            <h3>Winbox (MikroTik)</h3>
+            <p
+                data-id="Aplikasi manajemen RouterOS MikroTik"
+                data-en="RouterOS management application for MikroTik">
+                Aplikasi manajemen RouterOS MikroTik
+            </p>
+
+            <div class="download-labels">
+                <span class="label version">v3.x</span>
+                <span class="label size">± 5 MB</span>
+            </div>
+        </div>
+        <a href="https://mikrotik.com/download/winbox" target="_blank" class="download-btn">
+            <span data-id="Download" data-en="Download">Download</span>
+        </a>
+    </div>
+
+    <!-- VirtualBox -->
+    <div class="download-item">
+        <div>
+            <h3>VirtualBox</h3>
+            <p
+                data-id="Software virtualisasi untuk menjalankan Debian di PC"
+                data-en="Virtualization software for running Debian on a PC">
+                Software virtualisasi untuk menjalankan Debian di PC
+            </p>
+
+            <div class="download-labels">
+                <span class="label version">v7.x</span>
+                <span class="label size">± 110 MB</span>
+            </div>
+        </div>
+        <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" class="download-btn">
+            <span data-id="Download" data-en="Download">Download</span>
+        </a>
+    </div>
+
+
+
+<h3 class="download-group-title"
+    data-id="ISO Sistem Operasi & Server"
+    data-en="Operating System & Server ISO">
+    ISO Sistem Operasi & Server
+</h3>
+
+<!-- Debian ISO -->
+<div class="download-item">
+    <div>
+        <h3>Debian Linux – Installer ISO</h3>
+        <p
+            data-id="ISO installer resmi Debian Linux"
+            data-en="Official Debian Linux installer ISO">
+            ISO installer resmi Debian Linux
+        </p>
+
+        <div class="download-labels">
+            <span class="label version">Debian 11.7 (Bullseye)</span>
+            <span class="label size">± 3.7 GB</span>
+        </div>
+    </div>
+
+    <a href="https://cdimage.debian.org/cdimage/archive/11.7.0/amd64/iso-dvd/"
+       target="_blank"
+       class="download-btn">
+        🔗 <span data-id="Buka Link" data-en="Open Link">Buka Link</span>
+    </a>
+</div>
+
+<!-- Trixbox ISO -->
+<div class="download-item">
+    <div>
+        <h3>📞 Trixbox CE – IP PBX Server ISO</h3>
+        <p
+            data-id="ISO server telepon berbasis Asterisk"
+            data-en="Asterisk-based IP PBX server ISO">
+            ISO server telepon berbasis Asterisk
+        </p>
+
+        <div class="download-labels">
+            <span class="label version">Trixbox CE 2.8</span>
+            <span class="label size">± 1.4 GB</span>
+        </div>
+    </div>
+
+    <a href="https://sourceforge.net/projects/trixbox/files/trixbox%20CE/"
+       target="_blank"
+       class="download-btn">
+        🔗 <span data-id="Buka Link" data-en="Open Link">Buka Link</span>
+    </a>
+</div>
+
+    </div>
+</section>
+
+<section id="docs" class="section">
+    <div class="container">
+
+        <!-- JUDUL -->
+        <h2 class="section-title"
+            data-id="📝 Contoh Soal LSP – Junior Technical Support"
+            data-en="📝 Sample LSP Questions – Junior Technical Support">
+            📝 Contoh Soal LSP – Junior Technical Support
+        </h2>
+
+        <!-- SUBTITLE -->
+        <p class="section-subtitle"
+           data-id="Informasi dan file latihan uji kompetensi LSP yang kemungkinan muncul saat ujian"
+           data-en="Information and practice files for LSP competency tests that may appear in the exam">
+            Informasi dan file latihan uji kompetensi LSP yang kemungkinan muncul saat ujian
+        </p>
+
+        <!-- INFORMASI UMUM -->
+        <div class="version-info">
+            <h3 data-id="📌 Informasi Umum"
+                data-en="📌 General Information">
+                📌 Informasi Umum
+            </h3>
+
+            <p data-id="Materi ini disediakan sebagai bahan latihan bagi peserta uji kompetensi LSP."
+               data-en="This material is provided as practice material for LSP competency test participants.">
+                Materi ini disediakan sebagai bahan latihan bagi peserta uji kompetensi LSP.
+            </p>
+
+            <p data-id="Soal, topologi, dan konfigurasi disusun berdasarkan pola uji skema Junior Technical Support."
+               data-en="The questions, topology, and configurations are based on the Junior Technical Support scheme.">
+                Soal, topologi, dan konfigurasi disusun berdasarkan pola uji skema Junior Technical Support.
+            </p>
+
+            <p data-id="Seluruh file bersifat contoh dan bukan merupakan soal resmi LSP."
+               data-en="All files are examples and are not official LSP exam materials.">
+                Seluruh file bersifat contoh dan bukan merupakan soal resmi LSP.
+            </p>
+        </div>
+
+        <!-- RUANG LINGKUP -->
+        <div class="version-info">
+            <h3 data-id="📚 Ruang Lingkup Materi"
+                data-en="📚 Scope of Materials">
+                📚 Ruang Lingkup Materi
+            </h3>
+
+            <ul style="line-height:2; margin-left:1.5rem;">
+                <li data-id="Perancangan topologi jaringan"
+                    data-en="Network topology design"></li>
+                <li data-id="Pengalamatan IP (Static & DHCP)"
+                    data-en="IP addressing (Static & DHCP)"></li>
+                <li data-id="Konfigurasi router dan hotspot"
+                    data-en="Router and hotspot configuration"></li>
+                <li data-id="Konfigurasi server Debian"
+                    data-en="Debian server configuration"></li>
+                <li data-id="Pengujian koneksi dan troubleshooting"
+                    data-en="Connection testing and troubleshooting"></li>
+                <li data-id="Backup konfigurasi perangkat"
+                    data-en="Device configuration backup"></li>
+            </ul>
+        </div>
+
+        <!-- DOWNLOAD -->
+        <h3 style="margin-top:3rem; color:var(--primary); font-size:1.5rem;"
+            data-id="📥 Download File Latihan LSP"
+            data-en="📥 Download LSP Practice Files">
+            📥 Download File Latihan LSP
+        </h3>
+
+        <p class="section-subtitle"
+           data-id="Gunakan file berikut untuk latihan sebelum mengikuti uji kompetensi LSP"
+           data-en="Use the following files to practice before taking the LSP competency test">
+            Gunakan file berikut untuk latihan sebelum mengikuti uji kompetensi LSP
+        </p>
+
+        <div class="download-list">
+
+            <a href="file/CONTOH_SOAL_LSP_JUNIOR_TECHNICAL_SUPPORT.doc"
+               class="download-item" download>
+                📄
+                <div>
+                    <strong data-id="Contoh Soal LSP"
+                            data-en="Sample LSP Questions">
+                        Contoh Soal LSP
+                    </strong>
+                    <span data-id="Jobsheet latihan (belum dikerjakan)"
+                          data-en="Practice jobsheet (not completed)">
+                        Jobsheet latihan (belum dikerjakan)
+                    </span>
+                </div>
+            </a>
+
+            <a href="file/CONTOH_TOPOLOGI_LSP.pdf"
+               class="download-item" download>
+                🗺️
+                <div>
+                    <strong data-id="Contoh Topologi Jaringan"
+                            data-en="Sample Network Topology">
+                        Contoh Topologi Jaringan
+                    </strong>
+                    <span data-id="Gambar topologi latihan LSP"
+                          data-en="LSP practice topology diagram">
+                        Gambar topologi latihan LSP
+                    </span>
+                </div>
+            </a>
+
+            <a href="file/CONTOH_SOAL_LSP_SUDAH_DIKERJAKAN.doc"
+               class="download-item done" download>
+                ✅
+                <div>
+                    <strong data-id="Contoh Soal (Sudah Dikerjakan)"
+                            data-en="Sample Questions (Completed)">
+                        Contoh Soal (Sudah Dikerjakan)
+                    </strong>
+                    <span data-id="Referensi jawaban dan konfigurasi"
+                          data-en="Answer and configuration reference">
+                        Referensi jawaban dan konfigurasi
+                    </span>
+                </div>
+            </a>
+
+            <a href="file/BACKUP_ROUTER_LSP_DONE.backup"
+               class="download-item done" download>
+                💾
+                <div>
+                    <strong data-id="Backup Router (Contoh)"
+                            data-en="Router Backup (Sample)">
+                        Backup Router (Contoh)
+                    </strong>
+                    <span data-id="Hasil konfigurasi latihan"
+                          data-en="Result of practice configuration">
+                        Hasil konfigurasi latihan
+                    </span>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- CATATAN -->
+        <p style="margin-top:2rem; font-size:.95rem; opacity:.85;"
+           data-id="Catatan: Semua materi hanya untuk latihan dan pembelajaran."
+           data-en="Note: All materials are for practice and learning purposes only.">
+            Catatan: Semua materi hanya untuk latihan dan pembelajaran.
+        </p>
+
+    </div>
+</section>
+
+
+
+<section id="contact" class="section">
+    <div class="container">
+        <h2 class="section-title"
+            data-id="📨 Kontak & Feedback"
+            data-en="📨 Contact & Feedback">
+            📨 Kontak & Feedback
+        </h2>
+
+        <p class="section-subtitle"
+           data-id="Kami menerima feedback, saran, atau laporan link/data yang perlu diperbaiki"
+           data-en="We accept feedback, suggestions, or reports of broken links/data">
+            Kami menerima feedback, saran, atau laporan link/data yang perlu diperbaiki
+        </p>
+        
+        <div class="feedback-form">
+            <h3
+                data-id="Kirim Feedback"
+                data-en="Send Feedback">
+                Kirim Feedback
+            </h3>
+
+            <p style="margin-bottom: 2rem; color: var(--text-secondary);"
+               data-id="Silakan isi form di bawah ini untuk memberikan masukan atau melaporkan masalah"
+               data-en="Please fill out the form below to provide feedback or report an issue">
+                Silakan isi form di bawah ini untuk memberikan masukan atau melaporkan masalah
+            </p>
+            
+<form id="contact-form" class="contact-form">
+  <h3>Kirim Pesan</h3>
+
+  <div class="form-group">
+    <label>Nama</label>
+    <input type="text" name="from_name" placeholder="Nama kamu" required>
+  </div>
+
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" name="from_email" placeholder="Email kamu" required>
+  </div>
+
+  <div class="form-group">
+    <label>Pesan</label>
+    <textarea name="message" placeholder="Tulis pesan kamu di sini..." required></textarea>
+  </div>
+  <input type="hidden" name="date_received" id="date_received">
+
+  <button type="submit" class="submit-btn">
+    <i class="fas fa-paper-plane"></i> Kirim
+  </button>
+</form>
+
+        </div>
+    </div>
+</section>
+
+   <footer class="footer">
+    <div class="container">
+        <p
+            style="margin-top: 0.5rem; color: var(--text-secondary);"
+            data-id="© 2025 Dibuat oleh Agung Deni Prayogo. Semua Hak Dilindungi."
+            data-en="© 2025 Created by Agung Deni Prayogo. All Rights Reserved."
+        >
+            © 2025 Dibuat oleh Agung Deni Prayogo. Semua Hak Dilindungi.
+        </p>
+    </div>
+</footer>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  // Inisialisasi EmailJS
+  emailjs.init("aG4EZjnvDHpYwcSIA");
+
+  // Fungsi Toast Notification
+  function showToast(message, type = 'success') {
+    // Hapus toast sebelumnya
+    const existingToast = document.querySelector('.toast-notification');
+    if (existingToast) existingToast.remove();
+
+    const toast = document.createElement('div');
+    toast.className = `toast-notification ${type}`;
+    toast.innerHTML = `
+      <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+      <span>${message}</span>
+      <div class="toast-progress"></div>
+    `;
+
+    document.body.appendChild(toast);
+
+    // Auto remove after 3 seconds
+    setTimeout(() => {
+      toast.style.animation = 'slideOutRight 0.4s ease forwards';
+      setTimeout(() => toast.remove(), 400);
+    }, 3000);
+  }
+
+  // Event submit form
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const form = this;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    
+    // Tambah loading state
+    submitBtn.classList.add('btn-loading');
+    form.classList.add('form-loading');
+
+    // Buat tanggal saat pesan dikirim
+    const dateReceived = new Date().toLocaleString('id-ID', {
+      dateStyle: 'full',
+      timeStyle: 'short'
+    });
+
+    document.getElementById("date_received").value = dateReceived;
+
+    // Kirim ke EmailJS
+    emailjs.sendForm("service_l8440ze", "template_nx773jm", form)
+      .then(() => {
+        // Sukses
+        showToast('✅ Pesan berhasil dikirim! Terima kasih.', 'success');
+        form.reset();
+      })
+      .catch((error) => {
+        // Error
+        showToast('❌ Gagal mengirim pesan. Silakan coba lagi.', 'error');
+        console.error("Error:", error);
+      })
+      .finally(() => {
+        // Hapus loading state
+        submitBtn.classList.remove('btn-loading');
+        form.classList.remove('form-loading');
+      });
+  });
+</script>
+
+
+    <script>
+        let currentLang = 'id';
+        let currentTheme = localStorage.getItem('theme') || 'light';
+
+        // Search Data
+        const searchData = [
+            { title: 'Debian Bookworm', desc: 'Repositori Debian Stable', category: 'Repositori', section: 'repo' },
+            { title: 'Debian Testing', desc: 'Repositori Debian Testing', category: 'Repositori', section: 'repo' },
+            { title: 'Debian Sid', desc: 'Repositori Debian Unstable', category: 'Repositori', section: 'repo' },
+            { title: 'Mirror Indonesia', desc: 'Mirror lokal Kambing UI, Datautama', category: 'Repositori', section: 'repo' },
+            { title: 'apt update', desc: 'Update daftar paket', category: 'Perintah', section: 'commands' },
+            { title: 'apt upgrade', desc: 'Upgrade semua paket', category: 'Perintah', section: 'commands' },
+            { title: 'apt install', desc: 'Install paket baru', category: 'Perintah', section: 'commands' },
+            { title: 'systemctl', desc: 'Manajemen service Linux', category: 'Perintah', section: 'commands' },
+            { title: 'ip address', desc: 'Lihat konfigurasi IP', category: 'Perintah', section: 'commands' },
+            { title: 'ping', desc: 'Test koneksi jaringan', category: 'Perintah', section: 'commands' },
+            { title: 'ls -la', desc: 'List file detail', category: 'Perintah', section: 'commands' },
+            { title: 'chmod', desc: 'Ubah permission file', category: 'Perintah', section: 'commands' },
+            { title: 'Debian Wiki', desc: 'Dokumentasi resmi Debian', category: 'Link', section: 'links' },
+            { title: 'Debian Packages', desc: 'Pencarian paket Debian', category: 'Link', section: 'links' },
+            { title: 'Kernel.org', desc: 'Rilis kernel terbaru', category: 'Link', section: 'links' },
+            { title: 'sources.list', desc: 'File konfigurasi repositori', category: 'Download', section: 'download' },
+            { title: 'Samba Config', desc: 'Konfigurasi Samba server', category: 'Download', section: 'download' },
+            { title: 'SSH Config', desc: 'Konfigurasi SSH server', category: 'Download', section: 'download' },
+        ];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            initTheme();
+            initLanguage();
+            updateScrollProgress();
+            initNavbar();
+            
+            document.addEventListener('click', function(e) {
+                const searchContainer = document.querySelector('.search-container');
+                const searchResults = document.getElementById('searchResults');
+                if (searchContainer && !searchContainer.contains(e.target)) {
+                    searchResults.classList.remove('show');
+                }
+            });
+        });
+
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.querySelector('.theme-toggle i');
+            
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+                themeIcon.className = 'fas fa-moon';
+                currentTheme = 'light';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeIcon.className = 'fas fa-sun';
+                currentTheme = 'dark';
+            }
+            localStorage.setItem('theme', currentTheme);
+        }
+
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const themeIcon = document.querySelector('.theme-toggle i');
+            
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.body.setAttribute('data-theme', 'dark');
+                if (themeIcon) themeIcon.className = 'fas fa-sun';
+                currentTheme = 'dark';
+            } else {
+                if (themeIcon) themeIcon.className = 'fas fa-moon';
+                currentTheme = 'light';
+            }
+        }
+
+        // Language Toggle
+        function toggleLanguage() {
+            const langButton = document.querySelector('.lang-toggle');
+            const elements = document.querySelectorAll('[data-id][data-en]');
+            
+            if (currentLang === 'id') {
+                currentLang = 'en';
+                langButton.textContent = 'ID';
+                elements.forEach(el => {
+                    const newText = el.getAttribute('data-en');
+                    if (newText) el.textContent = newText;
+                });
+            } else {
+                currentLang = 'id';
+                langButton.textContent = 'EN';
+                elements.forEach(el => {
+                    const newText = el.getAttribute('data-id');
+                    if (newText) el.textContent = newText;
+                });
+            }
+            localStorage.setItem('language', currentLang);
+        }
+
+        function initLanguage() {
+            const savedLang = localStorage.getItem('language');
+            if (savedLang === 'en') {
+                toggleLanguage();
+            }
+        }
+
+        // Search Functions
+        function handleSearch(event) {
+            if (event.key === 'Enter') {
+                performSearch();
+            } else {
+                const query = event.target.value.toLowerCase().trim();
+                if (query.length > 0) {
+                    showSearchResults(query);
+                } else {
+                    document.getElementById('searchResults').classList.remove('show');
+                }
+            }
+        }
+
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            if (query.length > 0) {
+                const results = searchData.filter(item => 
+                    item.title.toLowerCase().includes(query) || 
+                    item.desc.toLowerCase().includes(query)
+                );
+                
+                if (results.length > 0) {
+                    showSection(results[0].section);
+                    highlightSearchTerm(query);
+                    document.getElementById('searchResults').classList.remove('show');
+                } else {
+                    showToast('Tidak ditemukan hasil untuk: ' + query, 'error');
+                }
+            }
+        }
+
+        function showSearchResults(query) {
+            const results = searchData.filter(item => 
+                item.title.toLowerCase().includes(query) || 
+                item.desc.toLowerCase().includes(query)
+            );
+            
+            const searchResults = document.getElementById('searchResults');
+            
+            if (results.length > 0) {
+                let html = '';
+                results.slice(0, 5).forEach(result => {
+                    html += `
+                        <div class="search-result-item" onclick="navigateToResult('${result.section}', '${query}')">
+                            <div class="search-result-title">${result.title}</div>
+                            <div class="search-result-desc">${result.desc}</div>
+                            <span class="search-result-category">${result.category}</span>
+                        </div>
+                    `;
+                });
+                searchResults.innerHTML = html;
+                searchResults.classList.add('show');
+            } else {
+                searchResults.innerHTML = '<div class="no-results" style="padding: 2rem; text-align: center; color: var(--text-secondary);">Tidak ada hasil ditemukan</div>';
+                searchResults.classList.add('show');
+            }
+        }
+
+        function navigateToResult(section, query) {
+            showSection(section);
+            document.getElementById('searchResults').classList.remove('show');
+            setTimeout(() => highlightSearchTerm(query), 300);
+        }
+
+        function highlightSearchTerm(query) {
+            const activeSection = document.querySelector('.section.active');
+            if (!activeSection) return;
+            
+            const elements = activeSection.querySelectorAll('h3, p, td, pre');
+            elements.forEach(el => {
+                if (el.textContent.toLowerCase().includes(query)) {
+                    el.style.background = 'rgba(99, 102, 241, 0.2)';
+                    el.style.transition = 'background 0.3s ease';
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    setTimeout(() => {
+                        el.style.background = '';
+                    }, 3000);
+                }
+            });
+        }
+
+        // Show Section
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+            
+            const navLinks = document.querySelectorAll('.nav-item a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + sectionId) {
+                    link.classList.add('active');
+                }
+            });
+            
+            const navMenu = document.querySelector('.nav-menu');
+            if (navMenu.classList.contains('active')) {
+                toggleMobileMenu();
+            }
+            
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile Menu
+        function toggleMobileMenu() {
+            const navMenu = document.querySelector('.nav-menu');
+            const mobileBtn = document.querySelector('.mobile-menu-btn i');
+            
+            navMenu.classList.toggle('active');
+            
+            if (navMenu.classList.contains('active')) {
+                mobileBtn.className = 'fas fa-times';
+            } else {
+                mobileBtn.className = 'fas fa-bars';
+            }
+        }
+
+        // Copy Code
+        function copyCode(button) {
+            const codeBlock = button.nextElementSibling;
+            const text = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+                button.style.background = 'linear-gradient(135deg, var(--success), #059669)';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.style.background = 'linear-gradient(135deg, var(--primary), var(--secondary))';
+                }, 2000);
+                
+                showToast('Kode berhasil disalin!', 'success');
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+                showToast('Gagal menyalin kode', 'error');
+            });
+        }
+
+        // Submit Feedback
+        function submitFeedback(event) {
+            event.preventDefault();
+            showToast('Terima kasih atas feedback Anda! Pesan telah diterima.', 'success');
+            event.target.reset();
+        }
+
+        // Toast Notification
+        function showToast(message, type = 'success') {
+            const existingToast = document.querySelector('.toast-notification');
+            if (existingToast) existingToast.remove();
+
+            const toast = document.createElement('div');
+            toast.className = `toast-notification ${type}`;
+            toast.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+                <span>${message}</span>
+            `;
+
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.animation = 'slideOutRight 0.4s ease forwards';
+                setTimeout(() => toast.remove(), 400);
+            }, 3000);
+        }
+
+        // Scroll Progress
+        function updateScrollProgress() {
+            const progressBar = document.querySelector('.scroll-progress');
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+            progressBar.style.width = scrollPercent + '%';
+        }
+
+        // Navbar Scroll
+        function initNavbar() {
+            const navbar = document.querySelector('.navbar');
+            
+            window.addEventListener('scroll', () => {
+                updateScrollProgress();
+                
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }, { passive: true });
+        }
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && href.length > 1) {
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    showSection(targetId);
+                }
+            });
+        });
+
+        // Generate Proxy Block
+        function generateProxyBlock() {
+    const name = document.getElementById("proxyRuleName").value.trim();
+    const site = document.getElementById("proxyBlockedSite").value.trim();
+    const checkboxes = document.querySelectorAll('.interface-checkbox:checked');
+    const interfaces = Array.from(checkboxes).map(cb => cb.value);
+
+    if (!name || !site || interfaces.length === 0) {
+        showToast("Isi semua data terlebih dahulu!", "error");
+        return;
+    }
+
+            const emailAdmin = name.toLowerCase().replace(/\s+/g, "");
+            const now = new Date();
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const hour = String(now.getHours()).padStart(2, '0');
+            const minute = String(now.getMinutes()).padStart(2, '0');
+            const timeStamp = `[${day}/${month} ${hour}.${minute}]`;
+
+            const domain1 = site.replace(/^www\./, "");
+            const domain2 = domain1;
+
+            const natRules = interfaces.map(i =>
+                `/ip firewall nat add chain=dstnat protocol=tcp dst-port=80 in-interface=${i} action=redirect to-ports=8080`
+            ).join("\n");
+
+            const command = `
+/ip proxy set enabled=yes port=8080 cache-administrator=${emailAdmin}
+/ip proxy set max-cache-size=none
+
+/ip proxy access add dst-host=${domain1} action=deny
+${natRules}
+            `.trim();
+
+            document.getElementById("proxyCommand").textContent = command;
+            document.getElementById("proxyResult").style.display = "block";
+            showToast("Perintah berhasil dibuat!", "success");
+        }
+
+        // Generate L7 HTTPS
+function generateL7HTTPS() {
+    const name = document.getElementById("l7RuleName").value.trim();
+    const site = document.getElementById("l7BlockedSite").value.trim();
+    const checkboxes = document.querySelectorAll('.interface-checkbox:checked');
+    const interfaces = Array.from(checkboxes).map(cb => cb.value);
+
+    if (!name || !site || interfaces.length === 0) {
+        showToast("Isi semua data terlebih dahulu!", "error");
+        return;
+    }
+
+            const ifaceList = interfaces.join(",");
+            const regex = `^.+(\\\\x00${site.replace(/\./g, "\\\\.")}).*$`;
+
+            const command = `
+# LAYER 7 REGEX UNTUK HTTPS (TLS SNI)
+/ip firewall layer7-protocol
+add name="${name}-https" regexp="${regex}"
+
+# BLOCK HTTPS MENGGUNAKAN FILTER RULE
+/ip firewall filter
+add chain=forward layer7-protocol="${name}-https" action=reject reject-with=icmp-network-unreachable in-interface=${ifaceList} comment="Blokir HTTPS ${site}"
+            `.trim();
+
+            document.getElementById("l7Command").textContent = command;
+            document.getElementById("l7Result").style.display = "block";
+            showToast("Perintah berhasil dibuat!", "success");
+        }
+
+        // Animation for slideOutRight
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideOutRight {
+                from {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateX(100px);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        function copyCodeBlock(block) {
+    const pre = block.querySelector('pre');
+    if (!pre) return;
+
+    const text = pre.innerText.trim();
+
+    navigator.clipboard.writeText(text).then(() => {
+        block.classList.add('copied');
+
+        showToast('Kode berhasil disalin!', 'success');
+
+        setTimeout(() => {
+            block.classList.remove('copied');
+        }, 2000);
+    }).catch(() => {
+        showToast('Gagal menyalin kode', 'error');
+    });
+}
+    </script>
+    <script>
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        const intro = document.getElementById('introOverlay');
+        intro.classList.add('slide-up');
+
+        setTimeout(() => {
+            intro.remove();
+        }, 900); // sesuai durasi animasi
+    }, 3500); // tampil 2 detik
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const intro = document.getElementById("introOverlay");
+    const animatedItems = document.querySelectorAll("[data-animate]");
+
+    // pastikan elemen tersembunyi dulu
+    animatedItems.forEach(el => el.classList.remove("animate-show"));
+
+    // durasi intro tampil
+    setTimeout(() => {
+        intro.classList.add("slide-up");
+
+        setTimeout(() => {
+            intro.style.display = "none";
+
+            // tampilkan animasi hero satu per satu
+            animatedItems.forEach(el => {
+                el.classList.add("animate-show");
+            });
+
+        }, 900); // slideUpFade
+    }, 2000); // durasi intro
+});
+</script>
+
+
+</body>
+</html>
