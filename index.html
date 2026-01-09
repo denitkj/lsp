@@ -823,7 +823,38 @@
     }
 }
 
+.filter-btn {
+    padding: 8px 18px;
+    border: 1px solid var(--border);
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    color: var(--text-secondary);
+}
 
+.filter-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Animasi sederhana saat item muncul */
+.filter-item {
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
     </style>
 </head>
 <body>
@@ -1501,210 +1532,153 @@ deb http://deb.debian.org/debian bullseye-updates main contrib non-free</pre>
 </section>
 
 
- <section id="download" class="section">
- <div class="container">
-    <h2 class="section-title"
-        data-id="Download"
-        data-en="Downloads">
-        Download
-    </h2>
+<section id="download" class="section">
+    <div class="container">
 
-    <p class="section-subtitle"
-       data-id="Aplikasi pendukung dan file konfigurasi untuk praktik Administrasi Sistem Jaringan"
-       data-en="Supporting applications and configuration files for Network System Administration practice">
-        Aplikasi pendukung dan file konfigurasi untuk praktik Administrasi Sistem Jaringan
-    </p>
+        <!-- JUDUL -->
+        <h2 class="section-title"
+            data-id="Download"
+            data-en="Downloads">
+            Download
+        </h2>
 
-    <!-- ================= APLIKASI ================= -->
-    <h3 class="download-group-title"
-        data-id="Aplikasi Pendukung"
-        data-en="Supporting Applications / Tools">
-        Aplikasi Pendukung
-    </h3>
-
-    <!-- WinSCP -->
-    <div class="download-item">
-        <div>
-            <h3>WinSCP</h3>
-            <p
-                data-id="Aplikasi transfer file SCP / SFTP / FTP (Windows)"
-                data-en="File transfer application supporting SCP / SFTP / FTP (Windows)">
-                Aplikasi transfer file SCP / SFTP / FTP (Windows)
-            </p>
-
-            <div class="download-labels">
-                <span class="label version">v6.x (Latest)</span>
-                <span class="label size">± 11 MB</span>
-            </div>
-        </div>
-        <a href="https://winscp.net/eng/download.php" target="_blank" class="download-btn">
-            <span data-id="Download" data-en="Download">Download</span>
-        </a>
-    </div>
-
-    <!-- FileZilla -->
-    <div class="download-item">
-        <div>
-            <h3>FileZilla Client</h3>
-            <p
-                data-id="FTP, FTPS, dan SFTP client open-source"
-                data-en="Open-source FTP, FTPS, and SFTP client">
-                FTP, FTPS, dan SFTP client open-source
-            </p>
-
-            <div class="download-labels">
-                <span class="label version">v3.x (Latest)</span>
-                <span class="label size">± 20 MB</span>
-            </div>
-        </div>
-        <a href="https://filezilla-project.org/download.php?type=client" target="_blank" class="download-btn">
-            <span data-id="Download" data-en="Download">Download</span>
-        </a>
-    </div>
-
-    <!-- PuTTY -->
-    <div class="download-item">
-        <div>
-            <h3>PuTTY</h3>
-            <p
-                data-id="SSH dan Telnet client untuk remote server"
-                data-en="SSH and Telnet client for remote server access">
-                SSH dan Telnet client untuk remote server
-            </p>
-
-            <div class="download-labels">
-                <span class="label version">v0.8x</span>
-                <span class="label size">± 3 MB</span>
-            </div>
-        </div>
-        <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" class="download-btn">
-            <span data-id="Download" data-en="Download">Download</span>
-        </a>
-    </div>
-
-    <!-- Winbox -->
-    <div class="download-item">
-        <div>
-            <h3>Winbox (MikroTik)</h3>
-            <p
-                data-id="Aplikasi manajemen RouterOS MikroTik"
-                data-en="RouterOS management application for MikroTik">
-                Aplikasi manajemen RouterOS MikroTik
-            </p>
-
-            <div class="download-labels">
-                <span class="label version">v3.x</span>
-                <span class="label size">± 5 MB</span>
-            </div>
-        </div>
-        <a href="https://mikrotik.com/download/winbox" target="_blank" class="download-btn">
-            <span data-id="Download" data-en="Download">Download</span>
-        </a>
-    </div>
-
-    <!-- VirtualBox -->
-    <div class="download-item">
-        <div>
-            <h3>VirtualBox</h3>
-            <p
-                data-id="Software virtualisasi untuk menjalankan Debian di PC"
-                data-en="Virtualization software for running Debian on a PC">
-                Software virtualisasi untuk menjalankan Debian di PC
-            </p>
-
-            <div class="download-labels">
-                <span class="label version">v7.x</span>
-                <span class="label size">± 110 MB</span>
-            </div>
-        </div>
-        <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" class="download-btn">
-            <span data-id="Download" data-en="Download">Download</span>
-        </a>
-    </div>
-
-<h3 class="download-group-title"
-    data-id="Login Hotspot MikroTik"
-    data-en="MikroTik Hotspot Login">
-    Login Hotspot MikroTik
-</h3>
-
-<div class="download-item">
-    <div>
-        <h3>Template Hotspot Standard</h3>
-        <p
-            data-id="Template login hotspot standar MikroTik yang responsif"
-            data-en="Responsive standard MikroTik hotspot login template">
-            Template login hotspot standar MikroTik yang responsif
+        <p class="section-subtitle"
+           data-id="Aplikasi pendukung dan file konfigurasi untuk praktik Administrasi Sistem Jaringan"
+           data-en="Supporting applications and configuration files for Network System Administration practice">
+            Aplikasi pendukung dan file konfigurasi untuk praktik Administrasi Sistem Jaringan
         </p>
 
-        <div class="download-labels">
-            <span class="label version">RouterOS v6/v7</span>
-            <span class="label size">± 150 KB</span>
+        <!-- FILTER BUTTON -->
+        <div class="filter-container" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-bottom:30px;">
+            <button class="filter-btn active" onclick="filterSelection('all', this)">Semua</button>
+            <button class="filter-btn" onclick="filterSelection('apk', this)">APK Tools</button>
+            <button class="filter-btn" onclick="filterSelection('tampilan', this)">Tampilan Hotspot</button>
+            <button class="filter-btn" onclick="filterSelection('iso', this)">ISO OS</button>
         </div>
-    </div>
 
-    <a href="deni_login.rar"
-       target="_blank"
-       class="download-btn">
-        <span data-id="Download Template" data-en="Download Template">Download Template</span>
-    </a>
-</div>
+        <!-- ================= APLIKASI ================= -->
+        <h3 class="download-group-title">Aplikasi Pendukung</h3>
 
-<h3 class="download-group-title"
-    data-id="ISO Sistem Operasi & Server"
-    data-en="Operating System & Server ISO">
-    ISO Sistem Operasi & Server
-</h3>
-
-<!-- Debian ISO -->
-<div class="download-item">
-    <div>
-        <h3>Debian Linux – Installer ISO</h3>
-        <p
-            data-id="ISO installer resmi Debian Linux"
-            data-en="Official Debian Linux installer ISO">
-            ISO installer resmi Debian Linux
-        </p>
-
-        <div class="download-labels">
-            <span class="label version">Debian 11.7 (Bullseye)</span>
-            <span class="label size">± 3.7 GB</span>
+        <div class="download-item apk">
+            <div>
+                <h3>WinSCP</h3>
+                <p>Aplikasi transfer file SCP / SFTP / FTP (Windows)</p>
+                <div class="download-labels">
+                    <span class="label version">v6.x</span>
+                    <span class="label size">± 11 MB</span>
+                </div>
+            </div>
+            <a href="https://winscp.net/eng/download.php" target="_blank" class="download-btn">
+                Download
+            </a>
         </div>
-    </div>
 
-    <a href="https://cdimage.debian.org/cdimage/archive/11.7.0/amd64/iso-dvd/"
-       target="_blank"
-       class="download-btn">
-        <span data-id="Buka Link" data-en="Open Link">Buka Link</span>
-    </a>
-</div>
-
-<!-- Trixbox ISO -->
-<div class="download-item">
-    <div>
-        <h3>Trixbox CE – IP PBX Server ISO</h3>
-        <p
-            data-id="ISO server telepon berbasis Asterisk"
-            data-en="Asterisk-based IP PBX server ISO">
-            ISO server telepon berbasis Asterisk
-        </p>
-
-        <div class="download-labels">
-            <span class="label version">Trixbox CE 2.8</span>
-            <span class="label size">± 1.4 GB</span>
+        <div class="download-item apk">
+            <div>
+                <h3>FileZilla Client</h3>
+                <p>FTP, FTPS, dan SFTP client open-source</p>
+                <div class="download-labels">
+                    <span class="label version">v3.x</span>
+                    <span class="label size">± 20 MB</span>
+                </div>
+            </div>
+            <a href="https://filezilla-project.org/download.php?type=client" target="_blank" class="download-btn">
+                Download
+            </a>
         </div>
-    </div>
 
-    <a href="https://sourceforge.net/projects/trixbox/files/trixbox%20CE/"
-       target="_blank"
-       class="download-btn">
-        🔗 <span data-id="Buka Link" data-en="Open Link">Buka Link</span>
-    </a>
-</div>
+        <div class="download-item apk">
+            <div>
+                <h3>PuTTY</h3>
+                <p>SSH dan Telnet client untuk remote server</p>
+                <div class="download-labels">
+                    <span class="label version">v0.8x</span>
+                    <span class="label size">± 3 MB</span>
+                </div>
+            </div>
+            <a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html" target="_blank" class="download-btn">
+                Download
+            </a>
+        </div>
+
+        <div class="download-item apk">
+            <div>
+                <h3>Winbox (MikroTik)</h3>
+                <p>Aplikasi manajemen RouterOS MikroTik</p>
+                <div class="download-labels">
+                    <span class="label version">v3.x</span>
+                    <span class="label size">± 5 MB</span>
+                </div>
+            </div>
+            <a href="https://mikrotik.com/download/winbox" target="_blank" class="download-btn">
+                Download
+            </a>
+        </div>
+
+        <div class="download-item apk">
+            <div>
+                <h3>VirtualBox</h3>
+                <p>Software virtualisasi untuk menjalankan Debian</p>
+                <div class="download-labels">
+                    <span class="label version">v7.x</span>
+                    <span class="label size">± 110 MB</span>
+                </div>
+            </div>
+            <a href="https://www.virtualbox.org/wiki/Downloads" target="_blank" class="download-btn">
+                Download
+            </a>
+        </div>
+
+        <!-- ================= HOTSPOT ================= -->
+        <h3 class="download-group-title">Login Hotspot MikroTik</h3>
+
+        <div class="download-item tampilan">
+            <div>
+                <h3>🌐 Template Hotspot Standard</h3>
+                <p>Template login hotspot MikroTik responsif</p>
+                <div class="download-labels">
+                    <span class="label version">RouterOS v6/v7</span>
+                    <span class="label size">± 250 KB</span>
+                </div>
+            </div>
+            <a href="#" class="download-btn">
+                Download Template
+            </a>
+        </div>
+
+        <!-- ================= ISO ================= -->
+        <h3 class="download-group-title">ISO Sistem Operasi & Server</h3>
+
+        <div class="download-item iso">
+            <div>
+                <h3>Debian Linux – Installer ISO</h3>
+                <p>ISO installer resmi Debian Linux</p>
+                <div class="download-labels">
+                    <span class="label version">Debian 11 (Bullseye)</span>
+                    <span class="label size">± 3.7 GB</span>
+                </div>
+            </div>
+            <a href="https://cdimage.debian.org/" target="_blank" class="download-btn">
+                Buka Link
+            </a>
+        </div>
+
+        <div class="download-item iso">
+            <div>
+                <h3>📞 Trixbox CE – IP PBX Server</h3>
+                <p>ISO server telepon berbasis Asterisk</p>
+                <div class="download-labels">
+                    <span class="label version">v2.8</span>
+                    <span class="label size">± 1.4 GB</span>
+                </div>
+            </div>
+            <a href="https://sourceforge.net/projects/trixbox/" target="_blank" class="download-btn">
+                Buka Link
+            </a>
+        </div>
 
     </div>
 </section>
-
 
 <section id="docs" class="section">
     <div class="container">
@@ -2442,6 +2416,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 900); // slideUpFade
     }, 2000); // durasi intro
 });
+
+
+</script>
+<script>
+function filterSelection(category, btn) {
+    let items = document.querySelectorAll(".download-item");
+    let buttons = document.querySelectorAll(".filter-btn");
+
+    buttons.forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    items.forEach(item => {
+        if (category === "all") {
+            item.style.display = "flex";
+        } else {
+            item.style.display = item.classList.contains(category) ? "flex" : "none";
+        }
+    });
+}
 </script>
 
 
