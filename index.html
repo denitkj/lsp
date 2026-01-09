@@ -447,6 +447,382 @@
 [data-animate][data-delay="4"] { transition-delay: 0.6s; }
 [data-animate][data-delay="5"] { transition-delay: 0.75s; }
 
+@media (min-width: 1024px) {
+    /* Perkecil Judul Utama Hero */
+    .hero-content h1 {
+        font-size: 2.8rem !important; /* Dari 4rem ke 2.8rem */
+        margin-bottom: 1rem;
+    }
+
+    /* Perkecil Deskripsi Hero */
+    .hero-content p {
+        font-size: 1rem !important; /* Dari 1.2rem ke 1rem */
+        max-width: 600px;
+        margin-bottom: 2rem;
+    }
+
+    /* Perkecil Kotak Pencarian */
+    .search-container {
+        max-width: 550px !important; /* Dari 700px ke 550px */
+        margin: 2rem auto;
+    }
+
+    .search-box input {
+        padding: 0.8rem 3rem !important; /* Lebih ramping */
+        font-size: 0.9rem;
+    }
+
+    .search-btn {
+        padding: 0.8rem 2rem !important;
+        font-size: 0.9rem;
+    }
+}
+@media (min-width: 1024px) {
+    .quick-access {
+        grid-template-columns: repeat(3, 1fr) !important; /* Paksa 3 kolom agar lebih rapi */
+        gap: 1.2rem !important;
+        margin-top: 2rem;
+    }
+
+    .card {
+        padding: 1.5rem !important; /* Dari 2.5rem ke 1.5rem */
+    }
+
+    .card-icon {
+        font-size: 2rem !important; /* Dari 3rem ke 2rem */
+        margin-bottom: 1rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem !important;
+    }
+
+    .card p {
+        font-size: 0.85rem !important;
+    }
+}
+@media (min-width: 1024px) {
+    .navbar {
+        padding: 0.5rem 0 !important;
+    }
+
+    .nav-container {
+        max-width: 1100px; /* Lebar konten lebih sempit */
+    }
+
+    .logo {
+        font-size: 1.2rem !important;
+    }
+
+    .nav-menu {
+        gap: 1.2rem !important;
+    }
+
+    .nav-item a {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 0 2rem; /* Mengurangi ruang kosong atas/bawah */
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem !important; /* Judul lebih kecil */
+        letter-spacing: -0.5px;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem !important;
+        line-height: 1.4;
+    }
+
+    .search-container {
+        margin: 1.0rem 0;
+    }
+
+    .search-box input {
+        padding: 1.3rem 2.5rem !important; /* Lebih tipis */
+        font-size: 0.85rem;
+    }
+
+    .quick-access {
+        gap: 1.2rem !important; /* Jarak antar kartu lebih rapat */
+    }
+
+    .card {
+        padding: 3.2rem !important; /* Padding dalam kartu dikurangi */
+    }
+
+    .card-icon {
+        font-size: 1.8rem !important;
+        margin-bottom: 0.8rem;
+    }
+
+    .card h3 {
+        font-size: 1rem !important;
+    }
+}
+/* Penyesuaian Ukuran Khusus Tampilan PC */
+@media (min-width: 1024px) {
+    /* 1. Perkecil Ukuran Font Global & Navigasi */
+    html {
+        font-size: 14px; /* Mengecilkan skala dasar dari standar 16px */
+    }
+
+    .navbar {
+        padding: 0.6rem 0; /* Navigasi lebih ramping */
+    }
+
+    .nav-container {
+        max-width: 1200px; /* Membatasi lebar agar tidak terlalu melebar ke samping */
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        gap: 1.2rem; /* Jarak antar menu lebih rapat */
+    }
+
+    /* 2. Perkecil Bagian Hero (Judul & Deskripsi) */
+    .hero {
+        padding: 6rem 2rem 2rem; /* Mengurangi ruang kosong atas bawah */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem !important; /* Judul tidak terlalu raksasa */
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        max-width: 600px;
+    }
+
+    /* 3. Perkecil Kotak Pencarian */
+    .search-container {
+        max-width: 550px;
+        margin: 1.5rem auto;
+    }
+
+    .search-box input {
+        padding: 0.8rem 3rem;
+    }
+
+    .search-btn {
+        padding: 0.8rem 1.5rem;
+    }
+
+    /* 4. Perkecil Kartu Quick Access & Kontainer */
+    .quick-access {
+        gap: 1rem; /* Jarak antar kartu lebih kecil */
+        margin-top: 2rem;
+    }
+
+    .card {
+        padding: 1.5rem; /* Padding dalam kartu dikurangi */
+        border-radius: 15px;
+    }
+
+    .card-icon {
+        font-size: 2rem; /* Ikon lebih kecil */
+        margin-bottom: 0.8rem;
+    }
+
+    .card h3 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 0.85rem;
+    }
+
+    /* 5. Perkecil Konten di Dalam Section (Repo, Commands, dll) */
+    .section {
+        padding: 5rem 2rem 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem !important;
+    }
+
+    .repo-block, .command-item, .download-item {
+        padding: 1.2rem;
+        border-radius: 15px;
+    }
+
+    .code-block {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+
+    table td, table th {
+        padding: 0.8rem; /* Tabel lebih ringkas */
+    }
+}
+
+@media (min-width: 1024px) {
+    /* 1. Perkecil Skala Font & Layout Global */
+    html {
+        font-size: 14.5px; /* Skala dasar diturunkan agar semua elemen mengecil proporsional */
+    }
+
+    .nav-container {
+        max-width: 1200px; /* Membatasi lebar agar tidak terlalu melebar */
+    }
+
+    /* 2. Optimalkan Navigasi */
+    .navbar {
+        padding: 0.6rem 0;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .nav-menu {
+        gap: 1.2rem;
+    }
+
+    /* 3. Perkecil Hero Section & Search */
+    .hero {
+        padding: 6rem 2rem 3rem; /* Mengurangi ruang kosong */
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem !important; /* Judul lebih elegan */
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .search-container {
+        max-width: 550px; /* Kotak cari lebih ramping */
+        margin: 2rem auto;
+    }
+
+    /* 4. Perkecil Kartu & Grid */
+    .quick-access {
+        grid-template-columns: repeat(3, 1fr); /* Tetap 3 kolom tapi lebih padat */
+        gap: 1.2rem;
+        max-width: 1000px;
+        margin: 3rem auto 0;
+    }
+
+    .card {
+        padding: 1.5rem; /* Padding dikurangi */
+    }
+
+    .card-icon {
+        font-size: 2.2rem; /* Ikon diperkecil */
+        margin-bottom: 1rem;
+    }
+
+    /* 5. Haluskan Animasi AOS (Fake AOS) */
+    [data-animate] {
+        transform: translateY(25px) scale(0.98); /* Jarak gerak diperpendek agar lebih smooth */
+        transition: 
+            opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+            filter 0.7s ease;
+    }
+
+    /* 6. Optimalkan Section Lain (Repo & Download) */
+    .section-title {
+        font-size: 2.2rem !important;
+    }
+
+    .repo-block, .feedback-form, .download-item {
+        padding: 1.5rem;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Perbaikan Khusus Tampilan PC (Desktop) */
+@media (min-width: 1024px) {
+    /* 1. Perkecil Font Dasar Global */
+    html {
+        font-size: 14px; /* Mengecilkan skala dasar dari 16px */
+    }
+
+    /* 2. Navigasi & Menu */
+    .navbar {
+        padding: 0.5rem 0; /* Navigasi lebih ramping */
+    }
+    .nav-container {
+        max-width: 1100px; /* Kontainer menu tidak terlalu lebar */
+    }
+    .nav-menu {
+        gap: 1.2rem; /* Jarak antar menu lebih rapat */
+    }
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    /* 3. Section Beranda (Hero & Cards) */
+    .hero {
+        padding: 5rem 2rem 2rem; /* Mengurangi spasi atas bawah */
+    }
+    .hero-content h1 {
+        font-size: 2.8rem !important; /* Judul lebih proporsional */
+    }
+    .search-container {
+        max-width: 500px; /* Kotak pencarian diperkecil */
+        margin: 1.5rem auto;
+    }
+    .quick-access {
+        grid-template-columns: repeat(3, 1fr); /* Tetap 3 kolom tapi lebih rapat */
+        gap: 1.2rem;
+        max-width: 1000px;
+        margin: 2rem auto;
+    }
+    .card {
+        padding: 1.5rem; /* Ruang dalam kartu dipersempit */
+    }
+    .card-icon {
+        font-size: 2.2rem; /* Ikon diperkecil */
+    }
+
+    /* 4. Section Repositori, Perintah, Link, LSP, Download & Kontak */
+    .section {
+        padding: 5rem 2rem 2rem;
+    }
+    .section-title {
+        font-size: 2rem !important;
+        margin-bottom: 0.5rem;
+    }
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+    }
+    .container {
+        max-width: 1000px; /* Membatasi lebar konten agar tidak meluas */
+    }
+
+    /* 5. Elemen Detail (Tabel, Kode, Form) */
+    .repo-block, .command-item, .download-item, .feedback-form {
+        padding: 1.5rem; /* Padding konten lebih kecil */
+        border-radius: 15px;
+    }
+    .code-block {
+        padding: 1rem;
+        font-size: 0.85rem;
+    }
+    table td, table th {
+        padding: 1rem; /* Tabel lebih ringkas */
+    }
+    .form-group {
+        margin-bottom: 1.2rem;
+    }
+    .form-group input, .form-group select, .form-group textarea {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
 
     </style>
 </head>
